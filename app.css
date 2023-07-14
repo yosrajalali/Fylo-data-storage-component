@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ### Primary */
+    --Gradient: hsl(6, 100%, 80%);
+    --Gradiantt: hsl(335, 100%, 65%);
+    /* ### Neutral */
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    background: url('images/bg-mobile.png'), var(--Very-Dark-Blue);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.fylo__section {
+    width: 90%;
+    background: var(--Dark-Blue);
+    padding: 3rem;
+    border-radius: 0.5rem 8rem 0.5rem 0.5rem;
+    height: 205px;
+}
+
+.files {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.file {
+    background: var(--Very-Dark-Blue);
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+.storage {
+    width: 90%;
+    background: var(--Dark-Blue);
+    padding: 2rem;
+    border-radius: 1rem;
+    color: var(--Pale-Blue);
+    text-align: center;
+    position: relative;
+    height: 160px;
+}
+
+.sidebar {
+    background: var(--Very-Dark-Blue);
+    width: 100%;
+    height: 2rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.pink {
+    background: linear-gradient(to left, var(--Gradiantt), var(--Gradient));
+    width: 80%;
+    height: 100%;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.sidebar__btn {
+    width: 1.5rem;
+    height: 90%;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    right: 0.3rem;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    background: var(--Pale-Blue);
+}
+
+.gb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+.remaining__storage {
+    background: #fff;
+    display: inline-block;
+    width: 9rem;
+    color: #000;
+    border-radius: 0.5rem;
+    height: 4rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -2rem;
+}
+
+.remaining__storage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.remaining__storage p:first-of-type {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+span {
+    color: #fff;
+}
+
+@media (min-width: 48em) {
+    body {
+        background: url('images/bg-desktop.png'), var(--Very-Dark-Blue);
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+    main {
+        flex-direction: row;
+    }
+    .fylo__section {
+        width: 21.87rem;
+    }
+    .storage {
+        width: 540px;
+        align-self: flex-end;
+    }
+    .remaining__storage {
+        top: -2rem;
+        margin: 0;
+        right: 2rem;
+        left: auto;
+        border-radius: 0.5rem 0.5rem 0 0.5rem;
+    }
+    .storage__text {
+        text-align: left;
+    }
+    .triangle-down {
+        width: 0;
+        height: 0;
+        border-left: 30px solid transparent;
+        border-right: 0 solid transparent;
+        border-top: 25px solid #fff;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+}
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+    main {
+        width: 90%;
+    }
+}
+
+@media all and (device-width: 820px) and (device-height: 1180px) and (orientation: portrait) {
+    main {
+        width: 80%;
+    }
+    body {
+        background-image: url('images/bg-desktop.png');
+        background-position: center;
+    }
+}
